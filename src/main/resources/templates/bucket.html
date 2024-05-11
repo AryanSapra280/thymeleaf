@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iterating</title>
+</head>
+<body>
+    <h1 th:text="${items}"></h1>
+    <ul>
+        <li th:each= "item_name,status:${items}">
+            <span th:style= "${status.odd ?'color:red;font-weight:bold;':''}" th:text="${status.index+1 + ' '} + ${item_name}"></span>
+        </li>
+    </ul>
+    <!-- <h1>The list of items in the bucket <span th:each= "item_name:${items}"></span></h1> -->
+</body>
+</html>

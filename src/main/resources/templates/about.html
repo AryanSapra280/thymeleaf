@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<body>
+    <h1>printing data using thymeleaf</h1>
+<h1 th:text="${name.toUpperCase()}"></h1>
+<h1 th:text="${name.charAt(0)}"></h1>
+<h2>today's date is <span th:text="${currentDate}"></span></h2>
+
+</body>
+</html>
