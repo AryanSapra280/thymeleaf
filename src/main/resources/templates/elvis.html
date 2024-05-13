@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>printing aaloo if exisits</h1>
+    <h1 th:each= "item_name:${items}">
+        <!-- <span th:text="${item_name}"></span> -->
+        <span th:text="${item_name.equals('aaloo')?item_name:''}">
+        </span>
+    </h1> 
+    <h1>
+        <span th:if= "${gender} == 'M'">Male</span>
+        <span th:unless= "${gender} == 'F'">Female</span>
+        <!-- <span th:if= "${gender} == 'F'">Female</span> -->
+    </h1>   
+</body>
+</html>
