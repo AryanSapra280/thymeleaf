@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 import java.util.*;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -28,5 +30,17 @@ public class MyController {
         model.addAttribute("items", items);
         return "bucket";
     }
+
+    @GetMapping("elvis")
+    public String elvisIteration(Model model) {
+        List<String>items = new ArrayList<>();
+        items.add("aaloo");
+        items.add("Gobi");
+        items.add("Bhindi");
+        model.addAttribute("items", items);
+        model.addAttribute("gender", 'F');
+        return "elvis";
+    }
+    
     
 }
